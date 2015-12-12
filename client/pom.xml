@@ -56,23 +56,6 @@
 			<artifactId>subethasmtp</artifactId>
 			<version>3.1.4</version>
 		</dependency>
-		<dependency>
-			<groupId>com.pi4j</groupId>
-			<artifactId>pi4j-core</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-math3</artifactId>
-			<version>3.5</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.sun.xml.ws</groupId>
-			<artifactId>jaxws-rt</artifactId>
-			<version>2.2.10</version>
-		</dependency>
-
 	</dependencies>
 
 
