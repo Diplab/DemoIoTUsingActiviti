@@ -75,8 +75,12 @@ public class SerializableDevice124 implements Serializable, Device124 {
 	@Override
 	public void blast() {
 		new Device124Service().getDevice124Port().blast();
-		;
 
+	}
+
+	@Override
+	public void cooler() {
+		new Device124Service().getDevice124Port().cooler();		
 	}
 
 }
