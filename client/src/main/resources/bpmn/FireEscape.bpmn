@@ -79,10 +79,13 @@ com.diplab.serializableDevice.SerializableDevice129.getInstanceOfSerializableDev
     </sequenceFlow>
     <sequenceFlow id="flow21" sourceRef="parallelgateway3" targetRef="scripttask8"></sequenceFlow>
     <scriptTask id="scripttask8" name="alert" scriptFormat="groovy" activiti:autoStoreVariables="false">
-      <script>out.println("ALERT");
-com.diplab.serializableDevice.SerializableDevice131.getInstanceOfSerializableDevice131().alerton();
-java.util.concurrent.TimeUnit.MILLISECONDS.sleep(1000);
-com.diplab.serializableDevice.SerializableDevice131.getInstanceOfSerializableDevice131().alertoff();</script>
+      <script>out.println("FireEscape ALERT");
+for(int i=0; i&lt;5; i++){
+	com.diplab.serializableDevice.SerializableDevice131.getInstanceOfSerializableDevice131().alerton();
+	java.util.concurrent.TimeUnit.MILLISECONDS.sleep(300);
+	com.diplab.serializableDevice.SerializableDevice131.getInstanceOfSerializableDevice131().alertoff();
+	java.util.concurrent.TimeUnit.MILLISECONDS.sleep(300);
+}</script>
     </scriptTask>
     <endEvent id="endevent4" name="End"></endEvent>
     <sequenceFlow id="flow22" sourceRef="scripttask8" targetRef="endevent4"></sequenceFlow>
@@ -160,7 +163,7 @@ com.diplab.serializableDevice.SerializableDevice129.getInstanceOfSerializableDev
         <omgdi:waypoint x="920.0" y="221.0"></omgdi:waypoint>
         <omgdi:waypoint x="1010.0" y="221.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="42.0" x="1030.0" y="275.0"></omgdc:Bounds>
+          <omgdc:Bounds height="13.0" width="42.0" x="1030.0" y="275.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow11" id="BPMNEdge_flow11">
@@ -177,7 +180,7 @@ com.diplab.serializableDevice.SerializableDevice129.getInstanceOfSerializableDev
         <omgdi:waypoint x="900.0" y="161.0"></omgdi:waypoint>
         <omgdi:waypoint x="1010.0" y="161.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="38.0" x="1010.0" y="172.0"></omgdc:Bounds>
+          <omgdc:Bounds height="39.0" width="38.0" x="1010.0" y="172.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow14" id="BPMNEdge_flow14">
@@ -193,7 +196,7 @@ com.diplab.serializableDevice.SerializableDevice129.getInstanceOfSerializableDev
         <omgdi:waypoint x="520.0" y="221.0"></omgdi:waypoint>
         <omgdi:waypoint x="590.0" y="219.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="100.0" x="615.0" y="273.0"></omgdc:Bounds>
+          <omgdc:Bounds height="13.0" width="57.0" x="615.0" y="273.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow20" id="BPMNEdge_flow20">
@@ -201,7 +204,7 @@ com.diplab.serializableDevice.SerializableDevice129.getInstanceOfSerializableDev
         <omgdi:waypoint x="499.0" y="117.0"></omgdi:waypoint>
         <omgdi:waypoint x="580.0" y="117.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="100.0" x="590.0" y="142.0"></omgdc:Bounds>
+          <omgdc:Bounds height="13.0" width="48.0" x="590.0" y="142.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow21" id="BPMNEdge_flow21">
