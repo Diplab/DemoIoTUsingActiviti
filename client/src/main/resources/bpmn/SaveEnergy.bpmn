@@ -47,7 +47,8 @@ execution.setVariable("TA",TA);
     <scriptTask id="scripttask4" name="set target temp 25" scriptFormat="groovy" activiti:autoStoreVariables="false">
       <script>out.println("SaveEnergy set ac temp as 25");
 com.diplab.serializableDevice.SerializableDevice124.getInstanceOfSerializableDevice124().setACtemperature(25);
-</script>
+java.util.concurrent.TimeUnit.MILLISECONDS.sleep(1000);
+com.diplab.serializableDevice.SerializableDevice124.getInstanceOfSerializableDevice124().cooler();</script>
     </scriptTask>
     <sequenceFlow id="flow7" name="outdoor &gt; 32 &amp; indoor &gt;30" sourceRef="exclusivegateway1" targetRef="scripttask4">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${TO>32 && TA>30}]]></conditionExpression>
@@ -59,7 +60,10 @@ com.diplab.serializableDevice.SerializableDevice124.getInstanceOfSerializableDev
     <sequenceFlow id="flow8" sourceRef="scripttask4" targetRef="scripttask5"></sequenceFlow>
     <scriptTask id="scripttask6" name="set target temp 28" scriptFormat="groovy" activiti:autoStoreVariables="false">
       <script>out.println("SaveEnergy set ac temp to 28");
-com.diplab.serializableDevice.SerializableDevice124.getInstanceOfSerializableDevice124().setACtemperature(28);</script>
+com.diplab.serializableDevice.SerializableDevice124.getInstanceOfSerializableDevice124().setACtemperature(28);
+java.util.concurrent.TimeUnit.MILLISECONDS.sleep(1000);
+out.println("SaveEnergy set cooler");
+com.diplab.serializableDevice.SerializableDevice124.getInstanceOfSerializableDevice124().cooler();</script>
     </scriptTask>
     <sequenceFlow id="flow9" name="outdoor &lt; 28 &amp; indoor &gt; 30" sourceRef="exclusivegateway1" targetRef="scripttask6">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${TO<28 && TA>30}]]></conditionExpression>
@@ -145,7 +149,7 @@ com.diplab.serializableDevice.SerializableDevice124.getInstanceOfSerializableDev
         <omgdi:waypoint x="610.0" y="287.0"></omgdi:waypoint>
         <omgdi:waypoint x="740.0" y="287.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="42.0" width="100.0" x="679.0" y="481.0"></omgdc:Bounds>
+          <omgdc:Bounds height="39.0" width="100.0" x="679.0" y="481.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow8" id="BPMNEdge_flow8">
@@ -156,7 +160,7 @@ com.diplab.serializableDevice.SerializableDevice124.getInstanceOfSerializableDev
         <omgdi:waypoint x="630.0" y="398.0"></omgdi:waypoint>
         <omgdi:waypoint x="740.0" y="397.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="42.0" width="100.0" x="690.0" y="603.0"></omgdc:Bounds>
+          <omgdc:Bounds height="39.0" width="100.0" x="690.0" y="603.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">
@@ -164,7 +168,7 @@ com.diplab.serializableDevice.SerializableDevice124.getInstanceOfSerializableDev
         <omgdi:waypoint x="610.0" y="517.0"></omgdi:waypoint>
         <omgdi:waypoint x="740.0" y="517.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="42.0" width="100.0" x="687.0" y="741.0"></omgdc:Bounds>
+          <omgdc:Bounds height="39.0" width="100.0" x="687.0" y="741.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow11" id="BPMNEdge_flow11">
