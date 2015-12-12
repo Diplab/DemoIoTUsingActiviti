@@ -5,8 +5,6 @@ import java.net.MalformedURLException;
 import org.activiti.engine.ProcessEngine;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.diplab.activiti.Undeploy;
-
 public class Scenario3 {
 	public static void main(String[] args) throws InterruptedException,
 			MalformedURLException {
@@ -18,7 +16,6 @@ public class Scenario3 {
 		final ProcessEngine processEngine = context
 				.getBean(ProcessEngine.class);
 
-		Undeploy.undeploy(processEngine);
 		processEngine.getRepositoryService().createDeployment()
 				.disableSchemaValidation().disableBpmnValidation()
 				.addClasspathResource("bpmn/RecordSensorData.bpmn")

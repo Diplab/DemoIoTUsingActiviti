@@ -3,8 +3,6 @@ package com.diplab.process;
 import org.activiti.engine.ProcessEngine;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.diplab.activiti.Undeploy;
-
 public class Scenario2 {
 	public static void main(String[] args) {
 
@@ -14,8 +12,6 @@ public class Scenario2 {
 
 		final ProcessEngine processEngine = context
 				.getBean(ProcessEngine.class);
-
-		Undeploy.undeploy(processEngine);
 
 		processEngine.getRepositoryService().createDeployment()
 				.disableSchemaValidation().disableBpmnValidation()

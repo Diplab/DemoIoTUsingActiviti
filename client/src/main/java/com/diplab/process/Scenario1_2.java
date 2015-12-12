@@ -5,8 +5,6 @@ import java.net.MalformedURLException;
 import org.activiti.engine.ProcessEngine;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.diplab.activiti.Undeploy;
-
 public class Scenario1_2 {
 
 	public static void main(String[] args) throws InterruptedException,
@@ -19,11 +17,12 @@ public class Scenario1_2 {
 		final ProcessEngine processEngine = context
 				.getBean(ProcessEngine.class);
 
-		Undeploy.undeploy(processEngine);
 		processEngine.getRepositoryService().createDeployment()
 				.disableSchemaValidation().disableBpmnValidation()
 				.addClasspathResource("bpmn/RecordSensorData.bpmn")
 				.addClasspathResource("bpmn/AirMonitor.bpmn").deploy();
+
+		// update sensor set data = 100000 where type = 'CO'
 	}
 
 }
