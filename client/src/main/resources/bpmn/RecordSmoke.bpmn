@@ -3,7 +3,7 @@
   <process id="RecordSmoke" name="My process" isExecutable="true">
     <startEvent id="timerstartevent1" name="Timer start">
       <timerEventDefinition>
-        <timeCycle>R/PT5S</timeCycle>
+        <timeCycle>R/PT10S</timeCycle>
       </timerEventDefinition>
     </startEvent>
     <scriptTask id="scripttask1" name="Read Smoke" scriptFormat="groovy" activiti:autoStoreVariables="false">

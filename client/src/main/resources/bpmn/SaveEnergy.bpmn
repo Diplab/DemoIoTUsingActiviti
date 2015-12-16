@@ -8,7 +8,6 @@
       <lane id="lane1" name="out door">
         <flowNodeRef>timerstartevent1</flowNodeRef>
         <flowNodeRef>scripttask1</flowNodeRef>
-        <flowNodeRef>usertask1</flowNodeRef>
       </lane>
       <lane id="lane2" name="Lab 1">
         <flowNodeRef>scripttask3</flowNodeRef>
