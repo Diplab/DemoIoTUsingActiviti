@@ -22,14 +22,14 @@ public interface SensorMapper {
 	@Select("SELECT * from SENSOR WHERE RANK = #{rank}")
 	Sensor selectSensor(int rank);
 
-	@Select("SELECT AVG(DATA) FROM SENSOR WHERE TYPE = #{type} and Device = #{device} AND DATEDIFF('MINUTE', TIME, NOW() )  < 60")
+	@Select("SELECT ISNULL(AVG(DATA), -1)  FROM SENSOR WHERE TYPE = #{type} and Device = #{device} AND DATEDIFF('MINUTE', TIME, NOW() )  < 60")
 	float selectAvg(@Param("type") String type, @Param("device") String device);
 
-	@Select("SELECT AVG(DATA) FROM SENSOR WHERE TYPE = #{type} and Device = #{device} AND DATEDIFF('MINUTE', TIME, NOW() )  < #{min}")
+	@Select("SELECT ISNULL(AVG(DATA), -1)  FROM SENSOR WHERE TYPE = #{type} and Device = #{device} AND DATEDIFF('MINUTE', TIME, NOW() )  < #{min}")
 	float selectAvgByTime(@Param("type") String type,
 			@Param("device") String device, @Param("min") int min);
 
-	@Select("SELECT MAX(DATA) FROM SENSOR WHERE TYPE = #{type} and Device = #{device} AND DATEDIFF('MINUTE', TIME, NOW() )  < #{min}")
+	@Select("SELECT ISNULL(MAX(DATA),-1) FROM SENSOR WHERE TYPE = #{type} and Device = #{device} AND DATEDIFF('MINUTE', TIME, NOW() )  < #{min}")
 	float selectMaxByTime(@Param("type") String type,
 			@Param("device") String device, @Param("min") int min);
 

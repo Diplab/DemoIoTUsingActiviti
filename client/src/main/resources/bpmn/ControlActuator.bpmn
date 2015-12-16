@@ -15,13 +15,13 @@ execution.setVariable("temp",tempavg);
     </scriptTask>
     <sequenceFlow id="flow1" sourceRef="timerstartevent1" targetRef="scripttask1"></sequenceFlow>
     <sequenceFlow id="flow2" sourceRef="scripttask1" targetRef="exclusivegateway1"></sequenceFlow>
-    <scriptTask id="scripttask2" name="open fans" scriptFormat="groovy" activiti:autoStoreVariables="false">
+    <scriptTask id="scripttask2" name="open fan" scriptFormat="groovy" activiti:autoStoreVariables="false">
       <script>out.println("ControlActuator open fan");
 com.diplab.serializableDevice.SerializableDevice124.getInstanceOfSerializableDevice124().on();</script>
     </scriptTask>
     <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
     <endEvent id="endevent2" name="End"></endEvent>
-    <scriptTask id="scripttask5" name="close fans" scriptFormat="groovy" activiti:autoStoreVariables="false">
+    <scriptTask id="scripttask5" name="close fan" scriptFormat="groovy" activiti:autoStoreVariables="false">
       <script>out.println("ControlActuator close fan");
 com.diplab.serializableDevice.SerializableDevice124.getInstanceOfSerializableDevice124().off();</script>
     </scriptTask>

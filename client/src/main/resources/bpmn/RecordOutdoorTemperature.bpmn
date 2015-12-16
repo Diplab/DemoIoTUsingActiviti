@@ -28,7 +28,7 @@ mapper.insert(sensor);</script>
         <omgdc:Bounds height="35.0" width="35.0" x="190.0" y="290.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="scripttask1" id="BPMNShape_scripttask1">
-        <omgdc:Bounds height="55.0" width="111.0" x="270.0" y="280.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="122.0" x="270.0" y="280.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="scripttask2" id="BPMNShape_scripttask2">
         <omgdc:Bounds height="55.0" width="105.0" x="420.0" y="280.0"></omgdc:Bounds>
@@ -41,7 +41,7 @@ mapper.insert(sensor);</script>
         <omgdi:waypoint x="270.0" y="307.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
-        <omgdi:waypoint x="381.0" y="307.0"></omgdi:waypoint>
+        <omgdi:waypoint x="392.0" y="307.0"></omgdi:waypoint>
         <omgdi:waypoint x="420.0" y="307.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
