@@ -2,7 +2,6 @@ package com.diplab.process;
 
 import java.net.MalformedURLException;
 
-import org.activiti.engine.ProcessEngine;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Scenario1_2 {
@@ -10,17 +9,12 @@ public class Scenario1_2 {
 	public static void main(String[] args) throws InterruptedException,
 			MalformedURLException {
 
-		@SuppressWarnings("resource")
+		@SuppressWarnings({ "resource", "unused" })
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-				"Beans.xml");
+				"BeanForSenario1_2.xml");
 
-		final ProcessEngine processEngine = context
-				.getBean(ProcessEngine.class);
-
-		processEngine.getRepositoryService().createDeployment()
-				.disableSchemaValidation().disableBpmnValidation()
-				.addClasspathResource("bpmn/RecordSensorData.bpmn")
-				.addClasspathResource("bpmn/AirMonitor.bpmn").deploy();
+		// final ProcessEngine processEngine = context
+		// .getBean(ProcessEngine.class);
 
 		// update sensor set data = 100000 where type = 'CO'
 	}

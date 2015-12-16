@@ -4,13 +4,14 @@ import java.net.MalformedURLException;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Scenario3 {
+public class StartEngine {
+
 	public static void main(String[] args) throws InterruptedException,
 			MalformedURLException {
 
-		@SuppressWarnings({ "resource", "unused" })
+		@SuppressWarnings({ "unused", "resource" })
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-				"BeanForSenario3.xml");
+				"Beans.xml");
 
 	}
 
