@@ -1,0 +1,126 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building client 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:1.3.2:java (default-cli) @ client ---
+[WARNING] Warning: killAfter is now deprecated. Do you need it ? Please comment on MEXEC-6.
+Dec 24, 2015 9:53:00 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5946b356: startup date [Thu Dec 24 21:53:00 CST 2015]; root of context hierarchy
+Dec 24, 2015 9:53:00 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [Beans.xml]
+Dec 24, 2015 9:53:01 PM org.activiti.engine.impl.db.DbSqlSession executeSchemaResource
+INFO: performing drop on engine with resource org/activiti/db/drop/activiti.h2.drop.engine.sql
+Dec 24, 2015 9:53:01 PM org.activiti.engine.impl.db.DbSqlSession executeSchemaResource
+INFO: performing drop on history with resource org/activiti/db/drop/activiti.h2.drop.history.sql
+Dec 24, 2015 9:53:01 PM org.activiti.engine.impl.db.DbSqlSession executeSchemaResource
+INFO: performing drop on identity with resource org/activiti/db/drop/activiti.h2.drop.identity.sql
+Dec 24, 2015 9:53:01 PM org.activiti.engine.impl.db.DbSqlSession executeSchemaResource
+INFO: performing create on engine with resource org/activiti/db/create/activiti.h2.create.engine.sql
+Dec 24, 2015 9:53:01 PM org.activiti.engine.impl.db.DbSqlSession executeSchemaResource
+INFO: performing create on history with resource org/activiti/db/create/activiti.h2.create.history.sql
+Dec 24, 2015 9:53:01 PM org.activiti.engine.impl.db.DbSqlSession executeSchemaResource
+INFO: performing create on identity with resource org/activiti/db/create/activiti.h2.create.identity.sql
+Dec 24, 2015 9:53:01 PM org.activiti.engine.impl.ProcessEngineImpl <init>
+INFO: ProcessEngine default created
+Dec 24, 2015 9:53:01 PM org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor start
+INFO: Starting up the default async job executor [org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor].
+Dec 24, 2015 9:53:01 PM org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor startExecutingAsyncJobs
+INFO: Creating thread pool queue of size 100
+Dec 24, 2015 9:53:01 PM org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor startExecutingAsyncJobs
+INFO: Creating executor service with corePoolSize 2, maxPoolSize 10 and keepAliveTime 5000
+Dec 24, 2015 9:53:01 PM org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable run
+INFO: {} starting to acquire async jobs due
+Dec 24, 2015 9:53:01 PM org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable run
+INFO: {} starting to acquire async jobs due
+Dec 24, 2015 9:53:02 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_7.bpmn
+Dec 24, 2015 9:53:03 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_12.bpmn
+Dec 24, 2015 9:53:03 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_10.bpmn
+Dec 24, 2015 9:53:03 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_4.bpmn
+Dec 24, 2015 9:53:03 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_12.bpmn
+Dec 24, 2015 9:53:03 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_4.bpmn
+Dec 24, 2015 9:53:03 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_1.bpmn
+Dec 24, 2015 9:53:03 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_7.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_4.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_6.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_9.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_13.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_1.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_2.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_11.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_13.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_10.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_3.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_6.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_14.bpmn
+Dec 24, 2015 9:53:04 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_9.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_13.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_10.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_5.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_0.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_8.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_3.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_2.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_6.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_11.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_8.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_14.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_9.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_0.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_14.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_5.bpmn
+Dec 24, 2015 9:53:05 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_5.bpmn
+Dec 24, 2015 9:53:06 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_0.bpmn
+Dec 24, 2015 9:53:06 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_2.bpmn
+Dec 24, 2015 9:53:06 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_3.bpmn
+Dec 24, 2015 9:53:06 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_60_7.bpmn
+Dec 24, 2015 9:53:06 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_11.bpmn
+Dec 24, 2015 9:53:06 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_12.bpmn
+Dec 24, 2015 9:53:06 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_10_8.bpmn
+Dec 24, 2015 9:53:06 PM org.activiti.engine.impl.bpmn.deployer.BpmnDeployer deploy
+INFO: Processing resource test_30_1.bpmn

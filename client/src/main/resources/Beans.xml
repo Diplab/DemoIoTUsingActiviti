@@ -7,7 +7,7 @@
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
 		<property name="driverClass" value="org.h2.Driver" />
-		<property name="url" value="jdbc:h2:tcp://192.168.0.125/~/activiti" />
+		<property name="url" value="jdbc:h2:tcp://192.168.0.100/~/activiti" />
 		<!-- java -cp .\h2-1.3.176.jar org.h2.tools.Server -webAllowOthers -tcpAllowOthers -->
 		<property name="username" value="sa" />
 		<property name="password" value="" />
@@ -18,6 +18,9 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
+	<bean id="sensorMapperClass" factory-method="forName" class="java.lang.Class">
+		<constructor-arg value="com.diplab.db.SensorMapper" />
+	</bean>
 
 	<bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
 		<property name="dataSource" ref="dataSource" />
@@ -32,9 +35,7 @@
 		<property name="asyncExecutorActivate" value="true" />
 		<property name="customMybatisMappers">
 			<set>
-				<bean factory-method="forName" class="java.lang.Class">
-					<constructor-arg value="com.diplab.db.SensorMapper" />
-				</bean>
+				<ref bean="sensorMapperClass" />
 			</set>
 		</property>
 		<!-- <property name="deploymentResources"> <array> <value>classpath*:/bpmn/EnvironmentAvg.bpmn</value> 
@@ -60,6 +61,11 @@
 
 	<bean id="sqlSession" factory-bean="sqlSessionFactory"
 		factory-method="openSession" scope="prototype" />
+
+	<bean id="mapper" factory-bean="sqlSession" factory-method="getMapper"
+		scope="prototype">
+		<constructor-arg ref="sensorMapperClass"></constructor-arg>
+	</bean>
 
 
 </beans>
